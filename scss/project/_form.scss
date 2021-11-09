@@ -193,6 +193,9 @@ body[dark] .df-search-card {
 
       .df-card-content-all {
         display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
       }
       .df-card-content-right-image {
         display: block;
@@ -213,6 +216,7 @@ body[dark] .df-search-card {
       @include lg {
         display: block;
         padding-left: 20px;
+        width: calc(100% - 120px);
       }
       @include md {
         h1 {

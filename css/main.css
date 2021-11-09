@@ -203,7 +203,10 @@ body[dark] .df-search-card .df-search-wrapper .df-search {
         width: 100%;
         padding-left: 0px; }
         .df-card-content .df-card-content-right .df-card-content-all {
-          display: flex; }
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          flex-wrap: wrap; }
         .df-card-content .df-card-content-right .df-card-content-right-image {
           display: block; } }
     .df-card-content .df-card-content-right .df-card-content-info {
@@ -219,7 +222,8 @@ body[dark] .df-search-card .df-search-wrapper .df-search {
       @media (max-width: 992px) {
         .df-card-content .df-card-content-right .df-card-content-info {
           display: block;
-          padding-left: 20px; } }
+          padding-left: 20px;
+          width: calc(100% - 120px); } }
       @media (max-width: 768px) {
         .df-card-content .df-card-content-right .df-card-content-info h1 {
           font-size: 16px; }

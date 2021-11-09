@@ -30,6 +30,7 @@ const getUser = async (x) => {
       if (x.status >= 200 && x.status <= 299) {
         return x.json();
       } else {
+        document.querySelector(".df-search").value = "";
         throw "Bad request";
       }
     });
@@ -78,6 +79,7 @@ const getUser = async (x) => {
         name: "company",
         value: company,
         action: (el) => {
+          el.setAttribute("href", company || "#");
           el.textContent = company || "Not Available";
         },
       },
@@ -114,6 +116,7 @@ document.querySelector(".df-search-button").addEventListener("click", () => {
   document
     .querySelector(".df-search-wrapper")
     .classList.remove("df-search-wrapper-error");
+
   const { value } = document.querySelector(".df-search");
   getUser(value || "octocat");
 });
